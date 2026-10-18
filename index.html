@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мэдлэгийн хайрцаг</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f6ff;
+      color: #24324a;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2878ff, #7545e8);
+      color: white;
+      text-align: center;
+      padding: 35px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    header p {
+      margin-bottom: 0;
+    }
+
+    nav {
+      background: white;
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 2px 8px #0001;
+    }
+
+    nav a {
+      color: #2878ff;
+      text-decoration: none;
+      margin: 8px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 25px auto;
+      padding: 15px;
+    }
+
+    .welcome {
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px #24324a12;
+    }
+
+    .card h3 {
+      color: #2878ff;
+    }
+
+    button {
+      background: #2878ff;
+      color: white;
+      border: none;
+      border-radius: 9px;
+      padding: 11px 16px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    #fact {
+      font-weight: bold;
+      color: #7545e8;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #24324a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>📚 Мэдлэгийн хайрцаг</h1>
+    <p>Сурч мэдье, хамтдаа хөгжицгөөе!</p>
+  </header>
+
+  <nav>
+    <a href="#home">Нүүр</a>
+    <a href="#lessons">Хичээлүүд</a>
+    <a href="#facts">Сонирхолтой баримт</a>
+  </nav>
+
+  <main id="home">
+    <section class="welcome">
+      <h2>Тавтай морил!</h2>
+      <p>Эндээс шинэ мэдлэг олж авч, өөрийгөө хөгжүүлээрэй.</p>
+    </section>
+
+    <section class="cards" id="lessons">
+      <div class="card">
+        <h3>🔬 Байгалийн ухаан</h3>
+        <p>Амьтан, ургамал, байгаль дэлхийн тухай сонирхоорой.</p>
+      </div>
+
+      <div class="card">
+        <h3>➗ Математик</h3>
+        <p>Тоо бодож, логик сэтгэлгээгээ хөгжүүлээрэй.</p>
+      </div>
+
+      <div class="card">
+        <h3>🌍 Англи хэл</h3>
+        <p>Шинэ үг сурч, англи хэлний мэдлэгээ нэмэгдүүлээрэй.</p>
+      </div>
+
+      <div class="card">
+        <h3>🐾 Амьтдын ертөнц</h3>
+        <p>Амьтдын амьдрал, онцлог, сонирхолтой баримтуудыг мэдэж аваарай.</p>
+      </div>
+    </section>
+
+    <section class="card" id="facts" style="margin-top:20px;text-align:center">
+      <h2>💡 Сонирхолтой баримт</h2>
+      <p>Нэг товч дараад шинэ баримт мэдэж аваарай!</p>
+      <button onclick="showFact()">Баримт харах</button>
+      <p id="fact"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Мэдлэгийн хайрцаг</p>
+    <p>Мэдлэг бол хүч юм! 💙</p>
+  </footer>
+
+  <script>
+    const facts = [
+      "Наймаалж гурван зүрхтэй.",
+      "Зөгий бүжгээрээ бусад зөгийд мэдээлэл дамжуулдаг.",
+      "Далайн гахай дуу авиагаар хоорондоо харилцдаг.",
+      "Нар бол од юм.",
+      "Ургамал нарны гэрлийг ашиглан хоол тэжээлээ үүсгэдэг."
+    ];
+
+    function showFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById("fact").textContent = facts[randomIndex];
+    }
+  </script>
+</body>
+  </html>
+  
